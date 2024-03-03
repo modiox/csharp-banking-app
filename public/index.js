@@ -1,5 +1,4 @@
 "use strict";
-
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -38,3 +37,10 @@ console.log(customer1);
 console.log(sunBranch);
 console.log(westBranch);
 console.log(customer4);
+const foundCustomer = arizonaBank.searchCustomerById(1);
+if (foundCustomer) {
+    console.log("Customer found:", foundCustomer.getName());
+}
+else {
+    console.log("Customer not found");
+}

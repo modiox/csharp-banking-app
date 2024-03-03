@@ -1,4 +1,5 @@
 import Customer from "./Customer";
+import Transaction from "./Transaction";
 import Branch from "./Branch";
 export default class Bank {
     name: string;
@@ -74,5 +75,17 @@ export default class Bank {
   
       return customerList;
     }
+    ///Searching function 
+    searchCustomerById(customerId: number): Customer | undefined {
+        for (const branch of this.branches) {
+          const customer = branch.getCustomers().find((cust) => cust.getId() === customerId);
+          if (customer) {
+            return customer;
+          }
+        }
+        return undefined;
+      }
+
+    
   }
   

@@ -59,5 +59,15 @@ class Bank {
         }
         return customerList;
     }
+    ///Searching function 
+    searchCustomerById(customerId) {
+        for (const branch of this.branches) {
+            const customer = branch.getCustomers().find((cust) => cust.getId() === customerId);
+            if (customer) {
+                return customer;
+            }
+        }
+        return undefined;
+    }
 }
 exports.default = Bank;
