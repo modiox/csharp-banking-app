@@ -8,5 +8,6 @@
       "esModuleInterop": true,
       "strict": true /* Enable all strict type-checking options. */,
     },
+    "include": ["src/**/*"],
     "files": ["src/index.ts"]
   }
